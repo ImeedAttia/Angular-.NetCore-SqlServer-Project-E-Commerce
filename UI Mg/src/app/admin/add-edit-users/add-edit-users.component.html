@@ -1,0 +1,57 @@
+<div class="d-flex flex-row bd-highlight mb-2">
+
+    <div class="form-froup row" style="width: 60%;">
+    
+        <label class="col-sm-2 col-form-label">User Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="UserName"
+            placeholder="Enter User Name">
+        </div>
+
+        <label class="col-sm-2 col-form-label">User Last Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="UserLName"
+            placeholder="Enter User uln">
+        </div>
+
+
+        <label class="col-sm-2 col-form-label">User Country</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="UserCountry"
+            placeholder="Enter User Country">
+        </div>    
+        <label class="col-sm-2 col-form-label">User Login</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="UserLogin"
+            placeholder="Enter User Login">
+        </div>    
+
+
+        <label class="col-sm-2 col-form-label">User password</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="UserPassword"
+            placeholder="Enter User password">
+        </div> 
+        
+        
+        <label class="col-sm-2 col-form-label">User Role</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="UserRole"
+            placeholder="Enter User Role">
+        </div> 
+    </div>
+
+
+
+
+  
+    </div>
+    
+    
+    <button (click)="addArt()" *ngIf="art.UserId==0" class="btn btn-primary">
+        Add
+    </button>
+    
+    <button (click)="EditArt()" *ngIf="art.UserId!=0" class="btn btn-primary">
+        Update
+    </button>

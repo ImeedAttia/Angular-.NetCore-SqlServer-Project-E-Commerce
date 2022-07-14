@@ -1,0 +1,22 @@
+
+<div class="container">
+    <h1 class="d-flex justify-content-center">Article and Users and Commandes</h1>
+    <h3 class="d-flex justify-content-center">Mg management tool</h3>
+    <nav class="navbar navbar-expand-sm bg-light navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <button class="m-1 btn btn-light btn-outline-primary" (click)="change('article')">Article</button>
+      </li>
+      <li class="nav-item">
+        <button class="m-1 btn btn-light btn-outline-primary" (click)="change('users')">Users</button>
+      </li>
+      <li class="nav-item">
+        <button class="m-1 btn btn-light btn-outline-primary" (click)="change('Commande')">Commande</button>
+      </li>
+     
+    </ul>
+    </nav>
+    <app-show-article *ngIf="vaariable == 'article'"></app-show-article>
+    <app-show-users *ngIf="vaariable == 'users'"></app-show-users>
+    <app-commande-gestion *ngIf="vaariable == 'Commande'"></app-commande-gestion>
+    </div>

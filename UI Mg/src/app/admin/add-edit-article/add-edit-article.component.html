@@ -1,0 +1,46 @@
+<div class="d-flex flex-row bd-highlight mb-2">
+
+    <div class="form-froup row" style="width: 60%;">
+    
+        <label class="col-sm-2 col-form-label">Article Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="ArticleName"
+            placeholder="Enter Article Name">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Article Prix</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="ArticlePrix"
+            placeholder="Enter Article prix">
+        </div>
+
+
+        <label class="col-sm-2 col-form-label">Article Description</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="ArticleDesc"
+            placeholder="Enter Article description">
+        </div>    
+        <label class="col-sm-2 col-form-label">Article Stock</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="ArticleStock"
+            placeholder="Enter Article description">
+        </div>    
+    </div>
+
+
+
+
+    <div class="ml-3 bd-highlight" style="width: 40%;">
+    <img [src]=ArticlePhotoPath height="250px;" width="200px;">
+    <input type="file" (change)="uploadPhoto($event)" class="mt-2"/>
+    </div>
+    </div>
+    
+    
+    <button (click)="addArt()" *ngIf="art.ArticleId==0" class="btn btn-primary">
+        Add
+    </button>
+    
+    <button (click)="EditArt()" *ngIf="art.ArticleId!=0" class="btn btn-primary">
+        Update
+    </button>

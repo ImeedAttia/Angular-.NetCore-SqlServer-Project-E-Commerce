@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\imeda\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\imeda\\.nuget\\packages"
+    ]
+  }
+}

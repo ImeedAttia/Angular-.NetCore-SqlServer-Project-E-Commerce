@@ -1,0 +1,11 @@
+
+.product-image img {
+    position: absolute;
+    top: -50px;
+    width: 400px;
+    transition: all 0.5s
+}
+
+.card:hover .product-image img {
+    transform: rotate(10deg)
+}

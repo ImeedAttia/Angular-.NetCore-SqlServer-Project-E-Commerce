@@ -1,0 +1,41 @@
+    <div class="container-fluid pt-5">
+        <div class="row px-xl-5">
+            <div class="col-lg-8 table-responsive mb-5">
+                <table class="table table-bordered text-center mb-0">
+                    <thead class="bg-dark text-light">
+                        <tr>
+                            <th>Products</th>
+                            <th>Price</th>
+                        
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody class="align-middle" >
+                        <tr *ngFor="let dataitem of ArticleList ; let i = index"  >
+                            <td class="align-middle"><img src="{{this.as.PhotoUrl+dataitem.ArticlePhotoName}}" alt="" style="width: 50px;">{{dataitem.ArticleName}}</td>
+                            <td class="align-middle"  >    {{dataitem.ArticlePrix}} DT </td>
+                            <td class="align-middle"><button class="btn btn-sm btn-danger" (click)="remove(dataitem.ArticleId,dataitem.ArticlePrix)"><i class="fa fa-times"></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-4">
+                <div class="card border-dark mb-5">
+                    <div class="card-header bg-dark border-0">
+                        <h4 class="font-weight-semi-bold m-0 text-light" >Cart Summary</h4>
+                    </div>
+                    
+                    <div class="card-footer border-secondary bg-transparent">
+                        <div class="d-flex justify-content-between mt-2">
+                            <h3 class="font-weight-bold">Total </h3>
+                            <h3 class="font-weight-bold">{{totale}} DT </h3>
+                        </div>
+                        <button class="btn btn-block btn-primary my-3 py-3" (click)="checkout()">Proceed To Checkout</button>
+                        <button class="btn btn-block btn-danger my-3 py-3" (click)="Cancel()">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Cart End -->
+    <br><br><br><br><br><br><br><br><br><br>

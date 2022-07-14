@@ -1,0 +1,84 @@
+
+
+<section class="vh-" style="background-color: #f4f5f7;" *ngFor="let dataitem of user">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-lg-10 mb-4 mb-lg-0">
+          <div class="card mb-3" style="border-radius: .5rem;">
+            <div class="row g-0">
+              <div class="col-md-4 gradient-custom text-center text-white" style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.png"
+                  class="img-fluid my-5"
+                  style="width: 80px;"
+                />
+                <h3>Pseudo:</h3>
+                <h5 >{{dataitem.UserLogin}}</h5>
+                
+               
+              </div>
+  
+              <div class="col-md-8">
+                <div class="card-body p-4">
+                  <h6>Information</h6>
+                  <hr class="mt-0 mb-4">
+                  <div class="row pt-1">
+                    <div class="col-6 mb-3">
+                      <h6>Name</h6>
+                      <p class="text-muted">{{dataitem.UserName }}</p>
+                    </div>
+                    <div class="col-6 mb-3">
+                      <h6>Last Name</h6>
+                      <p class="text-muted">{{dataitem.UserLName}}</p>
+                    </div>
+                  </div>
+                  <div class="row pt-1">
+                    <div class="col-6 mb-3">
+                      <h6>Email </h6>
+                      <p class="text-muted">{{dataitem.UsrEmail}}</p>
+                    </div>
+                    <div class="col-6 mb-3">
+                      <h6>Tel </h6>
+                      <p class="text-muted">{{dataitem.UserNumber}}</p>
+                    </div>
+                    
+                  </div>
+                  <div class="row pt-1">
+                    <div class="col-6 mb-3">
+                      <h6>Ville </h6>
+                      <p class="text-muted">{{dataitem.UserCountry}}</p>
+                    </div> 
+                    
+                    
+                 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Time</th>
+        <th scope="col">Validity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of Commande">
+        <th scope="row">{{data.CommandeId}}</th>
+        <td>{{data.CreateDate}}</td>
+        <td><span class="badge badge-{{testValidation(data.valid)}}">{{validity}}</span></td>
+      </tr>
+
+    </tbody>
+  </table>
+</section>
+ 

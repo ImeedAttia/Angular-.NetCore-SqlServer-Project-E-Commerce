@@ -1,0 +1,22 @@
+.nav{
+    background-color: blue;
+    height: 50px;
+}
+.divLink{
+    text-align: center;
+    color: white;
+}
+nav div a{
+    color: white;
+    font-size: 20px;
+}
+
+
+body {
+    background-color: #EEEEEE
+}
+
+a {
+    text-decoration: none !important
+}
+
